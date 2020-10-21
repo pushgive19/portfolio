@@ -1,0 +1,21 @@
+삼천리 자전거 리뉴얼
+Date 6월 10일 ~ 10월 5일
+
+삼천리 자전거 - index 
+자전거 소개  - 제품 상세페이지
+온라인 a/s 
+대리점 찾기
+vsc / illustrator / photoshop 
+html5 css3 jQuery vanilla js
+
+졸꾸 어플 디자인
+vsc / illustrator / figma / photoshop
+html5 css3 jQuery vanilla js
+
+kakaoclone 
+vsc html5 css3 github
+
+to do app clone 
+vsc html5 css3 vanilla js github
+
+github / blog / 김민준 소개 페이지
