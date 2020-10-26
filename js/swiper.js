@@ -2,7 +2,8 @@
 var mainSwiper = new Swiper('.main-swiper', {
   // Optional parameters
   loop: true,
-
+spaceBetween:280,
+speed:500,
   // If we need pagination
   pagination: {
     el: '.main-pagination',
@@ -20,6 +21,7 @@ var mainSwiper = new Swiper('.main-swiper', {
 var bgSwiper = new Swiper('.bg-swiper', {
   // Optional parameters
   loop: true,
+speed:600,
 //  cssMode:{
   //  simulateTouch:false,
 //  },

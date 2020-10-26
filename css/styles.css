@@ -1,8 +1,20 @@
 @import url("main.css");
 @import url("reset.css");
+
+@font-face {
+  font-family: "SpoqaHanSans";
+  src: url("../font/spoqaweb/SpoqaHanSans-Regular.svg") format("svg"),
+    url("../font/spoqaweb/SpoqaHanSans-Regular.ttf") format("truetype"),
+    url("../font/spoqaweb/SpoqaHanSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 html {
   box-sizing: border-box;
+  /* font-family: "SpoqaHanSans"; */
+  font-family: "SpoqaHanSans";
 }
 *,
 *::after,
