@@ -19,3 +19,9 @@ to do app clone
 vsc html5 css3 vanilla js github
 
 github / blog / 김민준 소개 페이지
+
+이미지가 안이뻐 선명한거 만들어서 사용하자.
+스크롤 기능
+hover시 blur 사이즈 100%로 조정
+슬라이드 스크롤 안되게 설정하기
+portfolio 사이즈 크게 만들기

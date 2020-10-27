@@ -1,0 +1,132 @@
+.aboutme {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 23, 23, 0.9);
+  position: relative;
+  z-index: 2;
+}
+
+.aboutme__title {
+  font-size: 13vmax;
+  position: absolute;
+  color: #1f272f;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  text-transform: uppercase;
+  padding: 0 0 0px 20px;
+}
+.aboutme__container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 110px 0;
+  color: #fff;
+  position: relative;
+}
+.aboutme__container .portfolio__btn {
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  cursor: pointer;
+}
+.aboutme__profile {
+  width: 196px;
+  margin-right: 50px;
+}
+.aboutme__profile .profile__img {
+  display: block;
+  width: 140px;
+  margin: 0 auto 20px auto;
+}
+.profile__phone,
+.profile__email {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.profile__email {
+  margin-bottom: 20px;
+}
+.profile__phone span {
+  font-size: 18px;
+  float: right;
+}
+.profile__email span {
+  font-size: 18px;
+  display: block;
+  padding: 5px 0;
+}
+.profile__blog a,
+.profile__github a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.profile__blog .blog__icon,
+.profile__github .github__icon {
+  height: 25px;
+  display: block;
+}
+.profile__blog .blog__content,
+.profile__github .github__content {
+  padding-left: 10px;
+}
+
+.content__intro .intro__title {
+  color: #eef13d;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 39px;
+}
+.content__intro .intro__detail {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 28px;
+  padding: 30px 0 70px 0;
+}
+
+.content__skill .skill__title {
+  font-size: 30px;
+  font-weight: bold;
+  height: 70px;
+}
+.skill__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill__item {
+  /* background-color: burlywood; */
+  width: 300px;
+  height: 130px;
+  margin-right: 20px;
+}
+.skill__item:nth-child(3n) {
+  margin-right: 0;
+}
+.skill__item:last-child {
+  /* flex-grow: 1; */
+}
+.skill__item .item__title {
+  font-size: 22px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.skill__item .item__img {
+  height: 30px;
+  padding-left: 10px;
+}
+.skill__item .item__content {
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 23px;
+}

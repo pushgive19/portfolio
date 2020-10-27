@@ -1,20 +1,32 @@
 @import url("main.css");
 @import url("reset.css");
+@import url("about-me.css");
 
 @font-face {
-  font-family: "SpoqaHanSans";
+  font-family: "Spoqa Han Sans";
   src: url("../font/spoqaweb/SpoqaHanSans-Regular.svg") format("svg"),
     url("../font/spoqaweb/SpoqaHanSans-Regular.ttf") format("truetype"),
     url("../font/spoqaweb/SpoqaHanSans-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-weight: 300;
+  src: local("Spoqa Han Sans Light"),
+    url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.ttf")
+      format("truetype");
 }
 
 body,
 html {
   box-sizing: border-box;
   /* font-family: "SpoqaHanSans"; */
-  font-family: "SpoqaHanSans";
+  font-family: "Spoqa Han Sans";
 }
 *,
 *::after,
