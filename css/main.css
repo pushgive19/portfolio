@@ -4,6 +4,52 @@ html {
   height: 100vh;
   overflow: hidden;
 }
+.portfolio {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.portfolio .aboutme__btn {
+  position: absolute;
+  color: white;
+  z-index: 5;
+  font-size: 30px;
+  right: 15%;
+  top: 50px;
+  font-weight: bold;
+}
+.aboutme__btn:hover {
+  color: #4392e2;
+}
+.aboutme__btn p {
+  display: inline-block;
+}
+.aboutme__btn .arrow {
+  display: inline-block;
+  transform: translateX(0px);
+  transition: transform 0.3s ease-in-out;
+}
+.aboutme__btn:hover .arrow {
+  transform: translateX(10px);
+}
+.aboutme__btn .bar {
+  width: 20px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #4392e2;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100px, -1px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.3s, 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.aboutme__btn:hover .bar {
+  transform: translate(-13px, -1px);
+  opacity: 1;
+}
 .portfolio__title {
   z-index: 2;
   position: absolute;
@@ -12,9 +58,13 @@ html {
   font-size: 40px;
   color: white;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .bg-swiper {
   /* z-index: -1; */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 3000px;
   height: 100%;
 }
@@ -22,24 +72,24 @@ html {
   width: 3000px;
   background-repeat: no-repeat;
   background-position: left center;
-  animation: bgTranslateLeft 600s ease-out;
+  animation: bgTranslateLeft 600s ease-out infinite;
 }
 .bg-slide1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("../images/web-bg1.jpg");
 }
 .bg-slide2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("../images/app-styleguide-bg.jpg");
 }
 .bg-slide3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("../images/kakao-clone-bg.png");
   background-size: 3000px 1200px;
 }
 .bg-slide4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url("../images/todo.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../images/todo1.png");
   background-size: 3000px 1080px;
 }
 .bg-swiper {
@@ -64,7 +114,7 @@ html {
 }
 .swiper-slide {
   /* background-color: rgb(179, 179, 127); */
-  background-color: #f7f6fe;
+  /* background-color: #f7f6fe; */
 }
 .swiper-slide a {
   /* font-size: 30px; */
@@ -80,28 +130,60 @@ html {
 .main-swiper .swiper-slide {
   background-repeat: no-repeat;
   background-position: top center;
+  overflow: hidden;
 }
-.main-swiper .main-slide1 {
-  background-image: url("../images/web-main.jpg");
+/* .main-swiper .main-slide1 {
+  background-image: url("../images/web.jpg");
+  background-size: cover;
+  background-position: center 0%;
+  animation: scroll 0.3s ease-in-out;
+} */
+.main-slide1 .slide1__img,
+.main-slide2 .slide2__img {
+  display: block;
+  position: absolute;
+  width: 1300px;
+  z-index: -1;
+  pointer-events: none;
+}
+.swiper-slide-active .slide1__img {
+  animation: scroll 200s linear infinite;
+}
+.swiper-slide-active .slide2__img {
+  animation: scroll 400s linear infinite;
+}
+.swiper-slide-active:hover .slide1__img {
+  animation-play-state: paused;
+}
+.swiper-slide-active:hover .slide2__img {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
 .main-swiper .main-slide2 {
-  background-image: url("../images/app-styleguide.jpg");
+  /* background-image: url("../images/app_styleguide.jpg");
+  background-size: cover;
+  background-position: center top; */
+}
+.main-swiper .main-slide3 {
+  background-image: url("../images/kakao_img.jpg");
   background-size: cover;
   /* background-position: center; */
 }
-.main-swiper .main-slide3 {
-  background-image: url("../images/kakao-clone.PNG");
-  background-size: contain;
-  /* background-position: center; */
-}
 .main-swiper .main-slide4 {
-  background-image: url("../images/todo.png");
-  background-size: contain;
+  background-image: url("../images/todo1.png");
+  background-size: cover;
   /* background-position: center; */
 }
 .slide__content {
-  width: 1300px;
-  height: 692px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   padding-top: 250px;
@@ -135,9 +217,11 @@ html {
   line-height: 20px;
 }
 .main-slide4 .slide__title span {
-  margin-left: 30px;
+  display: block;
+  margin-left: 5px;
   font-size: 20px;
   font-weight: normal;
+  padding-top: 9px;
 }
 .main-slide3 .content__wrapper {
   color: #222222;
@@ -224,10 +308,19 @@ html {
 .slide__content .content__item span {
   transition: color 0.3s ease-in-out;
 }
-.slide__content .content__item:hover span {
+.main-slide1 .content__item:hover span {
   color: rgb(202, 47, 55);
 }
+.main-slide2 .content__item:hover span {
+  color: #ff574c;
+}
 
+.main-slide3 .content__item:hover span {
+  color: #948714;
+}
+.main-slide4 .content__item:hover span {
+  color: #39cf96;
+}
 /*  */
 /*  */
 /* navigation buttons */
