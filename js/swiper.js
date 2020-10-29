@@ -2,6 +2,7 @@
 var mainSwiper = new Swiper('.main-swiper', {
   // Optional parameters
   loop: true,
+  allowTouchMove:false,
 spaceBetween:280,
 speed:500,
   // If we need pagination
